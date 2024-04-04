@@ -32,3 +32,6 @@ def get_password_characters():
         print("Error: Please select at least one character type.")
         return None
     return characters
+
+def display_password(password):
+    print("Generated Password:", password)
