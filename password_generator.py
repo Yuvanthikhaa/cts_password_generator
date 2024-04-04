@@ -5,7 +5,12 @@ def generate_password(length=12):
     characters = string.ascii_letters + string.digits + string.punctuation
     password = ''.join(random.choice(characters) for _ in range(length))
     return password
-
+    
+def get_password_length():
+    try:
+        return int(input("Enter the length of the password: "))
+    except ValueError:
+        print("Error: Please enter a valid length.")
 
 def get_password_characters():
     symbols = input("Include symbols? (yes/no): ").lower() == 'yes'
